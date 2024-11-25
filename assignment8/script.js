@@ -34,13 +34,13 @@ function loadPreferences() { // named the function "loadPreferences"
 document.getElementById('preferences-form').addEventListener('submit', function (e) { // "document.getElementId('preferences-form')" gets the id "preferences-form" from the html document. and ".addEventListener('submit', function (e)" adds an event listener to the submit function, allowing to function when pressed.
     e.preventDefault(); //This prevents the default settings of the submit button executing (the default setting is that each time you press the submit button, it reloads the page)
 
-    const personName = document.getElementById('name').value;
-    const backgroundColor = document.getElementById('background-color').value;
-    const foregroundColor = document.getElementById('foreground-color').value;
+    const personName = document.getElementById('name').value;  // "document.getElementById('name')" goes to the html file and searches for the id with the attribute of 'name', ".value" gives access to the value that the person entered in the element. 
+    const backgroundColor = document.getElementById('background-color').value; // this is similar but instead of 'name' its 'background-color'
+    const foregroundColor = document.getElementById('foreground-color').value; //this is also similar to the two codes above but instead of "name" or "background-color" its "foreground-color"
 
-    localStorage.setItem('personName', personName);
-    localStorage.setItem('backgroundColor', backgroundColor);
-    localStorage.setItem('foregroundColor', foregroundColor);
+    localStorage.setItem('personName', personName); // this means that any value stored in the variable (personName) will be saved in the browser's local storage using the key "personName" 
+    localStorage.setItem('backgroundColor', backgroundColor); //this is similar to the code above but the variables and keys are both "backgroundColor" instead of "personName"
+    localStorage.setItem('foregroundColor', foregroundColor); //for this one, the value stored in the variable "foregroundColor" will be saved in the local storage (of the browser) using the key "foregroundColor", just like the two codes above
 
     loadPreferences(); //this will apply the preferences
 
@@ -50,7 +50,7 @@ document.getElementById('preferences-form').addEventListener('submit', function 
     notify.style.backgroundColor = 'pink'; //this will make the background color of the notification pink
     notify.style.color = 'purple'; //this will make the color of the text purple.
     notify.style.padding = '15px'; //this will make the text 15px away from the border
-    notify.style.marginTop = '10px'; // this will make the top of the notification 20px away from the top of the webpage
+    notify.style.marginTop = '10px'; // this adds 10px of margin to the top of the notification box
     notify.style.textAlign = 'center'; //this will align the text to the center of the notification box
     document.body.appendChild(notify); //the "document.body" refers to the body element on the html page. "appendChild(notify)" is a way to add a new child element. so the "document.body" is considered the parent element and "notify" is the child element
 
